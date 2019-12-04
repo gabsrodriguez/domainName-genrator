@@ -8,37 +8,43 @@
         <link rel="shortcut icon" href="./4geeks.ico"></head>
     <body>
         <div class="container-fluid text-center">
-            <h1 class="mt-5">Domain Name Generator</h1>
-            <img src="./rigo-baby.jpg"></img>
+            <h1 class="mt-5" ></h1>
+            <img id ="img" src="./rigo-baby.jpg"></img>
             <div class="inputs">
                 <input type="text" id="inputProNoun">
                 <input type="text" id="inputAdjective">
                 <input type="text" id=:inputNoun>
             </div>
             <button id="btn" onclick="generate()">generate</button>
-            <div id="webGen" onload="webNames()"></div>
+            <div id="webGen" onclick="webNames()"></div>
         </div>
 
         <script>
+
         let proNoun = ["your", "ugly", "stupid"]; 
         let adjective = ["mom", "robot", "babushka"];
         let noun = [".com", ".org", ".net"]
         
+         document.querySelector("#img").onload = function() {webNames()};
+
         function webNames(){
-        
-        for (i = 0; i < proNoun.length; i++){
+         
+            for (i = 0; i < proNoun.length; i++){
 
-            for ( j = 0; j< adjective.length;j++ ) {
+                for ( j = 0; j< adjective.length;j++){
 
-                for ( h = 0 ; h< noun.length;h++ ) {
-        <!-- document.querySelector("#webGen").innerHTML=proNoun[i] + adjective[j] + noun[h] -->
-        console.log()
-            }}}
-        }
- 
+                    for ( h = 0 ; h< noun.length;h++){
+                        document.querySelector("#webGen").innerHTML+=('<p>'+ proNoun[i] + adjective[j] + noun[h] + "</p>")
+                }
+            }
+            }
+            
+    }
+    
+       
         
         
-        </script>
+    </script>
 
         <!-- do not remove this bundle.js tag -->
         <script type="text/javascript" src="./bundle.js"></script></body>
