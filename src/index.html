@@ -8,14 +8,37 @@
         <link rel="shortcut icon" href="./4geeks.ico"></head>
     <body>
         <div class="container-fluid text-center">
-            <h1 class="mt-5">Hello Rigo!</h1>
+            <h1 class="mt-5">Domain Name Generator</h1>
             <img src="./rigo-baby.jpg"></img>
-            <p class="alert alert-warning mt-4">If this text is <b>not</b> centered and <b>yellow</b>, you probably have an error</p>
-            <div class="fixed-bottom p-4">
-                Made with ❤️ by <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+            <div class="inputs">
+                <input type="text" id="inputProNoun">
+                <input type="text" id="inputAdjective">
+                <input type="text" id=:inputNoun>
             </div>
+            <button id="btn" onclick="generate()">generate</button>
+            <div id="webGen" onload="webNames()"></div>
         </div>
 
+        <script>
+        let proNoun = ["your", "ugly", "stupid"]; 
+        let adjective = ["mom", "robot", "babushka"];
+        let noun = [".com", ".org", ".net"]
+        
+        function webNames(){
+        
+        for (i = 0; i < proNoun.length; i++){
+
+            for ( j = 0; j< adjective.length;j++ ) {
+
+                for ( h = 0 ; h< noun.length;h++ ) {
+        <!-- document.querySelector("#webGen").innerHTML=proNoun[i] + adjective[j] + noun[h] -->
+        console.log()
+            }}}
+        }
+ 
+        
+        
+        </script>
 
         <!-- do not remove this bundle.js tag -->
         <script type="text/javascript" src="./bundle.js"></script></body>
