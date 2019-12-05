@@ -13,7 +13,8 @@
             <img id ="img" src="https://ca.slack-edge.com/T0BFXMWMV-U94H7DYSW-15b9b99d5bb5-512" onclick="webNames()" width="300px" height="300px"></img>
             
             <nav class="navbar navbar-light bg-light">
-                <form class="form-inline mx-auto" >
+                <div class="form-inline mx-auto">
+
                     <div class="input-group">
                         <button id="btn" onclick="myBtn()">add</button>
                         <input id="insert1" on type="text" class="form-control" placeholder="First Interest" aria-label="username" aria-describedby="basic-addon1">
@@ -24,7 +25,7 @@
                     <div class="input-group">
                         <input id="insert3" type="text" class="form-control" placeholder="domain" aria-label="Username" aria-describedby="basic-addon3">
                     </div>
-                </form>
+                </div>
             </nav>
 
 
@@ -50,26 +51,27 @@
         
          document.querySelector("#img").onload = function() {webNames()};
 
-        function webNames(){
-         
+
+
+        
+         function webNames(){
             for (i = 0; i < proNoun.length; i++){
                 for (j = 0; j< adjective.length;j++){
                     for (h = 0 ; h< noun.length;h++){
-                        document.querySelector("#webGen").innerHTML+=("<div  class='col-4 text-center'>"+proNoun[i] + adjective[j] + noun[h]+"</div>")                    
+                        document.querySelector("#webGen").innerHTML+="<div  class='col-4 text-center'>"+proNoun[i] + adjective[j] + noun[h]+"</div>"                    
                         }
                     }
                 }
-            }
-    
-            let input = document.querySelector("#insert1").value;
-                    input.addEventListener("keyup", function(event) {
-                if (event.keyCode === 13) {
-                event.preventDefault();
-                document.querySelector("#myBtn").click();
-            }
-                });
+            } 
 
-        <!-- innerHTML= proNoun[i].onkeyup= -->
+            
+     function myBtn(){ 
+        let input1 = document.querySelector("#insert1").value
+        proNoun.push(input1);
+    }  
+
+    
+     
 
         </script>
 
