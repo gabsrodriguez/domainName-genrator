@@ -15,6 +15,7 @@
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline mx-auto" >
                     <div class="input-group">
+                        <button id="btn" onclick="myBtn()">add</button>
                         <input id="insert1" on type="text" class="form-control" placeholder="First Interest" aria-label="username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group">
@@ -28,7 +29,7 @@
 
 
 
-<button id="btn" onclick="myBtn()">generate</button>
+
             <button id="btn" onclick="webNames()">generate</button>
             <!-- <div id="webGen" onclick="webNames()"></div> -->
 
@@ -61,7 +62,6 @@
             }
     
             let input = document.querySelector("#insert1").value;
-                proNoun.push(input){
                     input.addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                 event.preventDefault();
